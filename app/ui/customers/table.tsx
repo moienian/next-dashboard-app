@@ -10,10 +10,8 @@ export default async function CustomersTable({
 }) {
   return (
     <div className="w-full">
-      <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
-        Customers
-      </h1>
       <Search placeholder="Search customers..." />
+      {/* TODO: add create customer functionality */}
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
@@ -107,10 +105,13 @@ export default async function CustomersTable({
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm group-first-of-type:rounded-md group-last-of-type:rounded-md">
                         {customer.total_paid}
                       </td>
+                      {/* TODO: add edit butoon */}
+                      {/* TODO: add delete butoon */}
                     </tr>
                   ))}
                 </tbody>
               </table>
+              {/* TODO: add pagination */}
             </div>
           </div>
         </div>
