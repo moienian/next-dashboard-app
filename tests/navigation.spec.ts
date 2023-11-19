@@ -60,10 +60,23 @@ test.describe('navigation for auhtorized user', () => {
     ).toBeVisible();
   });
 
-  test('navigation for authorized user', async ({ page }) => {
+  test('navigation to invoice page', async ({ page }) => {
     await page.goto('/dashboard/invoices');
 
     await expect(page).toHaveTitle(/Invoices | Acme Dashboard/);
     await expect(page.getByRole('heading', { name: 'Invoices' })).toBeVisible();
+
+    // TODO: add test for Search functionality
+  });
+
+  test('navigation to customers page', async ({ page }) => {
+    await page.goto('/dashboard/customers');
+
+    await expect(page).toHaveTitle(/Customers | Acme Dashboard/);
+    await expect(
+      page.getByRole('heading', { name: 'Customers' })
+    ).toBeVisible();
+
+    // TODO: add test for Search functionality
   });
 });
